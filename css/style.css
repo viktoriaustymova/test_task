@@ -5,8 +5,17 @@
 }
   
 body{
-    height: 100vh;
     font-family: "Nunito Sans", sans-serif;
+}
+
+.profile-icon{
+    display: block;
+    position: absolute;
+    right: 0;
+    margin-top: 17px;
+    margin-right: 22px;
+    height: 37px;
+    width: 37px;
 }
   
 .main{
@@ -17,13 +26,91 @@ body{
 }
 
 .sidebar{
+    padding-left: 30px;
+    padding-right: 30px;
     position: fixed;
     left: 0;
     width: 260px;
     background-color: rgba(243, 243, 243, 1);
     height: 100%;
     overflow: auto;
-    text-align: center;
+}
+
+.sidebar li:first-child{
+    border-bottom: 0px;
+}
+
+.sidebar li:nth-child(2){
+    border-top: 1px solid rgba(176, 176, 176, 1);;
+}
+
+
+.owl-logo{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.navbar{
+    list-style-type: none;
+    text-align: left;
+    font-weight: 300;
+    font-size: 16px;
+    a{
+        text-decoration: none;
+        color:rgba(0, 0, 0, 1);
+    }
+    li{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(176, 176, 176, 1);
+    }
+}
+
+.modules-list{
+    background-color: white;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 2px solid black;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-items:left;
+    li{
+        display: block;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+.modules-list li:last-child{
+    border-bottom: 0px;
+}
+
+.module-list-icon{
+    width: 16x;
+    height: 16px;
+    padding-left: 5px;
+    margin-right: 10px;
+}
+
+.module-list-item{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.modules-list-item-first{
+    color: rgba(253, 77, 0, 1); 
+    font-weight: 800;
+}
+
+
+.navbar-header{
+    padding-bottom: 5px;
+    font-weight: 800;
+    font-size: 16px;
+    border-bottom: 0px;
 }
 
 .dashboard-heading{
@@ -31,13 +118,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    img {
+        margin: 12px 20px;
+        width: 25px;
+        height: 25px;
+    }
 }
 
-.dashboard-heading img{
-    margin: 12px 20px;
-    width: 25px;
-    height: 25px;
-}
 
 .arrow-left{
     display: none;
@@ -72,17 +159,15 @@ h1{
     justify-content: space-between;
     text-align: center;
     margin-bottom: 10px;
-}
-
-.phase-content-block img{
-    height: 72px;
-    width: 72px;
-}
-
-.phase-content-block p{
-    margin-top: 15px;
+    img {
+        height: 72px;
+        width: 72px;
+    }
+    p{
+        margin-top: 15px;
     font-size: 14px;
     font-weight: 300;
+    }
 }
 
 .start-button{
@@ -142,11 +227,11 @@ h1{
 .source{
     text-decoration: none;
     color: rgba(111, 111, 111, 1);
-    cursor: pointer;
 }
 
 .resourse-arrow{
     margin-right: 20px;
+    cursor: pointer;
 }
 
 h2{
