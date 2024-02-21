@@ -13,38 +13,31 @@
             <img src="icons/owl.svg" alt="owl" class="owl-logo">
             <ul class="navbar">
                 <li class="navbar-header">Modules</li>
-                <ol class="modules-list">
-                    <li>
-                        <div class="modules-list-item">
-                            <img src="icons/dot.svg" alt="dot" class="module-list-icon">
-                            <a href="#"><span class="modules-list-item-first">1: Inner Critic</span></a>
-                        </div>   
-                    </li>
-                    <li>
-                        <div class="modules-list-item">
+                <div class="module-list-container">
+                    <div class="module-list-icons">
+                        <img src="icons/dot.svg" alt="dot" class="module-list-icon">
+                        <img src="icons/Vector 130.svg" alt="separator" class="separator">
+                        <img src="icons/LockedSmall.svg" alt="loced" class="module-list-icon hidden-icon">
+                        <div class="hidden-menu">
+                            <img src="icons/Vector 130.svg" alt="separator" class="separator hidden-separator">
                             <img src="icons/LockedSmall.svg" alt="loced" class="module-list-icon">
-                            <a href="#">2: Feedback</a>
-                        </div>
-                    </li> 
-                    <li>
-                        <div class="modules-list-item">
+                            <img src="icons/Vector 130.svg" alt="separator" class="separator">
                             <img src="icons/LockedSmall.svg" alt="loced" class="module-list-icon">
-                            <a href="#">3: Accountability</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="modules-list-item">
+                            <img src="icons/Vector 130.svg" alt="separator" class="separator">
                             <img src="icons/LockedSmall.svg" alt="loced" class="module-list-icon">
-                            <a href="#">4: Growth Mindser</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="modules-list-item">
+                            <img src="icons/Vector 130.svg" alt="separator" class="separator">
                             <img src="icons/LockedSmall.svg" alt="loced" class="module-list-icon">
-                            <a href="#">5: Unassigned</a>
                         </div>
-                    </li>
-                </ol>
+                    </div>
+                    <ol class="modules-list">
+                        <li><a href="#"><span class="modules-list-item-first">1: Inner Critic</span></a></li>
+                        <li><button id="more-button"> + 4 More</button></li>
+                        <li class="hidden"><a href="#">2: Feedback</a></li> 
+                        <li class="hidden"><a href="#">3: Accountability</a></li>
+                        <li class="hidden"><a href="#">4: Growth Mindser</a></li>
+                        <li class="hidden"><a href="#">5: Unassigned</a></li>
+                    </ol>
+                </div>
                 <li><a href="#">Coaching Sessions</a></li>
                 <li><a href="#">Diagnostics & Outcomes</a></li>
                 <li><a href="#">Profile & Settings</a></li>
@@ -146,6 +139,8 @@
             </div>   
         </div>
     </section>
+
+    <script src="js/main.js"></script>
     
 </body>
 </html>
