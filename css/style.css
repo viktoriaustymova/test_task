@@ -82,9 +82,6 @@ body{
         display: block;
         padding-top: 5px;
         padding-bottom: 5px;
-        :hover {
-            background-color: rgba(243, 243, 243, 1);
-        }
     }
 }
 
@@ -94,6 +91,10 @@ body{
 
 .modules-list li:nth-child(2){
     border-bottom: 0px;
+}
+
+.modules-list li:nth-child(3){
+    border-top: 1px solid rgba(176, 176, 176, 1);
 }
 
 .module-list-icons{
@@ -133,6 +134,10 @@ body{
     color: rgba(0, 0, 0, 1);;
     cursor: pointer;
     
+}
+
+.menu-numbers{
+    font-weight: 800;
 }
 
 .hidden-menu{
