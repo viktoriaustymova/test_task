@@ -6,8 +6,8 @@ const hiddenIcon = document.querySelector('.hidden-icon');
 const hiddenSeparator = document.querySelector('.hidden-separator');
 const hiddenMenuItems = document.querySelectorAll('.modules-list .hidden');
 const thirdMenuItem = document.querySelector('.modules-list li:nth-child(3)');
-const navbar = document.querySelectorAll('.modules-list');
-
+const navbar = document.querySelectorAll('.module-list-container');
+const menuLinks = document.querySelectorAll('.menu-links');
 
 
 toggleButton.addEventListener('click',toggleSideMenu);
@@ -48,7 +48,7 @@ navbar.forEach(item => {
 })
 
 function toggleItem(event){
-  
+   
    if (previousTarget){
       previousTarget.style.color = 'rgba(0, 0, 0, 1)';
       previousTarget.style.fontWeight = 300;
@@ -57,24 +57,24 @@ function toggleItem(event){
       firstMenuItem.style.fontWeight = 300;
       firstMenuItem.style.fontStyle = 'normal';
       firstMenuIcon.src = newFirstMenuIcon;
-      menuItemIcons.forEach(icon => {
-         icon.src = menuItemIconDefault;
-      })
    }
+   
    event.target.style.fontStyle = 'normal';
    event.target.style.color = 'rgba(253, 77, 0, 1)'; 
    event.target.style.fontWeight = 800;
-   menuItemIcons.forEach(icon => {
-      icon.src = selectedMenuIcon;
+   menuItemIcons.forEach((icon,index) => {
+      if(menuLinks[index] === event.target){
+         icon.src = selectedMenuIcon;
+      } else {
+         icon.src = menuItemIconDefault;
+      }
    })
-   
+  
    previousTarget = event.target;
 
    if(event.target === firstMenuItem){
       firstMenuIcon.src = firstMenuIconDefault;
    }
 }
-
-
 
 
