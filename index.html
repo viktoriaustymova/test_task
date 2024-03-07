@@ -8,137 +8,227 @@
     <title>Document</title>
 </head>
 <body>
-    <section>
-        <nav class="sidebar">
-            <img src="icons/owl.svg" alt="owl" class="owl-logo">
-            <ul class="navbar">
-                <li class="navbar-header">Modules</li>
-                <div class="module-list-container">
-                    <div class="module-list-icons">
-                        <img src="icons/dot.svg" alt="dot" class="module-list-icon first-icon">
-                        <img src="icons/Vector 130.svg" alt="separator" class="separator">
-                        <img src="icons/LockedSmall.svg" alt="loced" class="module-list-icon hidden-icon">
-                        <div class="hidden-menu">
-                            <img src="icons/Vector 130.svg" alt="separator" class="separator hidden-separator">
-                            <img src="icons/LockedSmall.svg" alt="loced" class="module-list-icon">
-                            <img src="icons/Vector 130.svg" alt="separator" class="separator">
-                            <img src="icons/LockedSmall.svg" alt="loced" class="module-list-icon">
-                            <img src="icons/Vector 130.svg" alt="separator" class="separator">
-                            <img src="icons/LockedSmall.svg" alt="loced" class="module-list-icon">
-                            <img src="icons/Vector 130.svg" alt="separator" class="separator">
-                            <img src="icons/LockedSmall.svg" alt="loced" class="module-list-icon">
-                        </div>
-                    </div>
-                    <ol class="modules-list">
-                        <li><a href="#"><span class="modules-list-item-first"><span class="menu-numbers">1:</span> Inner Critic</span></a></li>
-                        <li><button id="more-button"> + 4 More</button></li>
-                        <li class="hidden"><a href="feedback.html" class="menu-links"><span class="menu-numbers">2:</span> Unassigned</a></li> 
-                        <li class="hidden"><a href="#" class="menu-links"><span class="menu-numbers">3:</span> Unassigned</a></li>
-                        <li class="hidden"><a href="#" class="menu-links"><span class="menu-numbers">4:</span> Unassigned</a></li>
-                        <li class="hidden"><a href="#" class="menu-links"><span class="menu-numbers">5:</span> Unassigned</a></li>
-                    </ol>
-                </div>
-                <li><a href="#">Coaching Sessions</a></li>
-                <li><a href="#">Diagnostics & Outcomes</a></li>
-                <li><a href="#">Profile & Settings</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </nav>
-    </section>
-
-    <section>
-        <div class="profile">
-            <a href="#">
-                <img src="icons/Profile Dropdown.svg" alt="profile" class="profile-icon">
-            </a>
+    <div class="container">
+        <div class="mobile-header">
+            <img src="icons/owl.svg" alt="owl" class="owl-logo-mobile">
+            <a class="mobile-menu-open"><img src="icons/Mobile Menu.svg" alt="hamburger-menu-icon" class="toggle-mobile-menu"></a>
         </div>
-        <div class="main">
-            <div class="module-block">
-                <div class="dashboard-heading">
-                    <img src ="icons/Change Modules.svg" alt="arrow-icon" class="arrow-left">
-                    <h1>Module 1: Inner Critic</h1>
-                    <a href="feedback.html"><img src="icons/Change Modules.svg" alt="arrow-icon" class="arrow-right"></a>
-                </div>
-                <div class="phases">
-                    <div class="phase-heading-block">
-                        <div>Phase 1: Observing Yourself</div>
-                        <div>Due Date: Jul 8</div>
-                    </div>
-                    <div class="phase-content-block">
-                        <div class="reflection">
-                            <img src="icons/reflectionIcon.svg" alt="cloud">
-                            <p>Reflection</p>
-                            <button type="button" class="start-button">Start</button>
+        <section>
+            <nav class="sidebar">
+                <img src="icons/owl.svg" alt="owl" class="owl-logo">
+                <ul class="navbar">
+                    <li class="navbar-header">Modules</li>
+                    <div class="module-list-container">
+                        <div class="module-list-icons">
+                            <img src="icons/dot.svg" alt="dot" class="module-list-icon first-icon">
+                            <img src="icons/Vector 130.svg" alt="separator" class="separator">
+                            <img src="icons/LockedSmall.svg" alt="locked" class="module-list-icon hidden-icon">
+                            <div class="hidden-menu">
+                                <img src="icons/Vector 130.svg" alt="separator" class="separator hidden-separator">
+                                <img src="icons/LockedSmall.svg" alt="locked" class="module-list-icon unlocked">
+                                <img src="icons/Vector 130.svg" alt="separator" class="separator">
+                                <img src="icons/LockedSmall.svg" alt="locked" class="module-list-icon unlocked">
+                                <img src="icons/Vector 130.svg" alt="separator" class="separator">
+                                <img src="icons/LockedSmall.svg" alt="locked" class="module-list-icon">
+                                <img src="icons/Vector 130.svg" alt="separator" class="separator">
+                                <img src="icons/LockedSmall.svg" alt="locked" class="module-list-icon">
+                            </div>
                         </div>
-                        <div class="lesson">
-                            <img src="icons/appleIcon.svg" alt="apple">
-                            <p>Lesson</p>
-                            <button type="button" class="locked-button">Locked</button>
+                        <ol class="modules-list">
+                            <li><a href="#"><span class="modules-list-item-first"><span class="menu-numbers">1:</span> Inner Critic</span></a></li>
+                            <li><button class="more-button"> + 4 More</button></li>
+                            <li class="hidden"><a href="#" class="menu-links"><span class="menu-numbers">2:</span> Unassigned</a></li> 
+                            <li class="hidden"><a href="#" class="menu-links"><span class="menu-numbers">3:</span> Unassigned</a></li>
+                            <li class="hidden"><a href="#" class="menu-links"><span class="menu-numbers">4:</span> Unassigned</a></li>
+                            <li class="hidden"><a href="#" class="menu-links"><span class="menu-numbers">5:</span> Unassigned</a></li>
+                        </ol>
+                    </div>
+                    <div class="module-list-container unlocked-menu">
+                        <div class="module-list-icons">
+                            <img src="icons/Complete.svg" alt="dot" class="module-list-icon">
+                            <img src="icons/Vector 130.svg" alt="separator" class="separator">
+                            <img src="icons/dotBlack.svg" alt="locked" class="module-list-icon selected-icon">
+                            <img src="icons/Vector 130.svg" alt="separator" class="separator">
+                            <img src="icons/dotBlack.svg" alt="locked" class="module-list-icon">
+                            <img src="icons/Vector 130.svg" alt="separator" class="separator">
+                            <img src="icons/LockedSmall.svg" alt="locked" class="module-list-icon hidden-icon-locked">
+                            <div class="hidden-menu locked-icons">
+                                <img src="icons/Vector 130.svg" alt="separator" class="separator hidden-separator-locked">
+                                <img src="icons/LockedSmall.svg" alt="locked" class="module-list-icon">
+                                <img src="icons/Vector 130.svg" alt="separator" class="separator">
+                                <img src="icons/LockedSmall.svg" alt="locked" class="module-list-icon">
+                            </div>
                         </div>
-                        <div class="practice">
-                            <img src="icons/practiseIcon.svg" alt="practice">
-                            <p>Practice</p>
-                            <button type="button" class="locked-button">Locked</button>
-                        </div>
+                        <ol class="modules-list unlocked-list">
+                            <li><a href="index.html"><span class="modules-list-item-first"><span class="menu-numbers">1:</span> Inner Critic</span></a></li>
+                            <li><a href="feedback.html"><span class="modules-list-item-selected"><span class="menu-numbers">2:</span> Feedback</span></a></li> 
+                            <li><a href="accountability.html"><span class="menu-numbers">3:</span> Accountability</a></li>
+                            <li><button class="more-button show-button"> + 2 More</button></li>
+                            <li class="hidden locked-link"><a href="#" class="menu-links"><span class="menu-numbers">4:</span> Unassigned</a></li>
+                            <li class="hidden locked-link"><a href="#" class="menu-links"><span class="menu-numbers">5:</span> Unassigned</a></li>
+                        </ol>
                     </div>
-                    <div class="locked-phase" id="second-phase">
-                            <img src="icons/Locked.svg" alt="loced" class="locked-icon">
-                            <p class="phase-capture">Phase 2: Small Steps</p>
-                            <p>Due Date: Jul 8</p>
-                    </div>
-                    <div class="locked-phase" id="third-phase">
-                        <img src="icons/Locked.svg" alt="loced" class="locked-icon">
-                        <p class="phase-capture">Phase 3: Big Leaps</p>
-                        <p>Due Date: Jul 8</p>
-                    </div>
-                    <div class="locked-phase" id="fourth-phase">
-                        <img src="icons/Locked.svg" alt="loced" class="locked-icon">
-                        <p class="phase-capture">Phase 4: Coaching Session</p>
-                        <p>Due Date: Jul 8</p>
-                    </div>
-                </div>
+                    <li><a href="#">Coaching Sessions</a></li>
+                    <li><a href="#">Diagnostics & Outcomes</a></li>
+                    <li><a href="#">Profile & Settings</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+        </section>
+    
+        <section>
+            <div class="profile">
+                <a href="#">
+                    <img src="icons/Profile Dropdown.svg" alt="profile" class="profile-icon">
+                </a>
             </div>
-            <div class="resources-block">
-                <h2>More Resources</h2>
-                <div class="resource">
-                    <a href="#" class="resourse-arrow">
-                        <img src="icons/Resources Arrows.svg" alt="resourse-arrow">
-                    </a>
-                    <p>Brené Brown on Empathy  <span class="source"> RSA on YouTube (2:53)</span> </p>
+            <div class="main">
+                <div class="module-block">
+                    <div class="dashboard-heading">
+                        <img src ="icons/Change Modules.svg" alt="arrow-icon" class="arrow-left">
+                        <h1>Module 1: Inner Critic</h1>
+                        <a href="#" class="navigationsArrow"><img src="icons/Change Modules.svg" alt="arrow-icon" class="arrow-right"></a>
+                    </div>
+                    <div class="phases-locked">
+                        <div class="phase-heading-block">
+                            <div>Phase 1<span class="hidden-mobile">: Observing Yourself</span></div>
+                            <div>Due Date: Jul 8</div>
+                        </div>
+                        <div class="phase-content-block">
+                            <div class="reflection">
+                                <img src="icons/reflectionIcon.svg" alt="cloud">
+                                <p>Reflection</p>
+                                <button type="button" class="start-button">Start</button>
+                            </div>
+                            <div class="lesson">
+                                <img src="icons/appleIcon.svg" alt="apple">
+                                <p>Lesson</p>
+                                <button type="button" class="locked-button">Locked</button>
+                            </div>
+                            <div class="practice">
+                                <img src="icons/practiseIcon.svg" alt="practice">
+                                <p>Practice</p>
+                                <button type="button" class="locked-button">Locked</button>
+                            </div>
+                        </div>
+                        <div class="locked-phase" id="second-phase">
+                                <img src="icons/Locked.svg" alt="loced" class="locked-icon">
+                                <p class="phase-capture">Phase 2<span class="hidden-mobile">: Small Steps</span></p>
+                                <p>Due Date: Jul 8</p>
+                        </div>
+                        <div class="locked-phase" id="third-phase">
+                            <img src="icons/Locked.svg" alt="loced" class="locked-icon">
+                            <p class="phase-capture">Phase 3<span class="hidden-mobile">: Big Leaps</span></p>
+                            <p>Due Date: Jul 8</p>
+                        </div>
+                        <div class="locked-phase" id="fourth-phase">
+                            <img src="icons/Locked.svg" alt="loced" class="locked-icon">
+                            <p class="phase-capture">Phase 4<span class="hidden-mobile">: Coaching Session</span></p>
+                            <p>Due Date: Jul 8</p>
+                        </div>
+                    </div>
+                    <div class="phases-completed">
+                        <div class="completed-phase">
+                            <img src="icons/Check.svg" alt="check" class="locked-icon">
+                            <p class="phase-capture">Phase 1<span class="hidden-mobile">: Observing Yourself</span></p>
+                            <a class="track-link"><img src="icons/Plus.svg" alt="plus"> Track Practice</a>
+                        </div>
+                        <div class="completed-phase">
+                            <img src="icons/Check.svg" alt="check" class="locked-icon">
+                            <p class="phase-capture">Phase 2<span class="hidden-mobile">: Small Steps</span></p>
+                            <a class="track-link"><img src="icons/Plus.svg" alt="plus"> Track Practice</a>
+                        </div>
+                        <div class="completed-phase">
+                            <img src="icons/Check.svg" alt="check" class="locked-icon">
+                            <p class="phase-capture">Phase 3<span class="hidden-mobile">: Big Leaps</span></p>
+                            <a class="track-link"><img src="icons/Plus.svg" alt="plus"> Track Practice</a>
+                        </div>
+                        <div class="completed-phase">
+                            <img src="icons/Check.svg" alt="check" class="locked-icon">
+                            <p class="phase-capture">Phase 4<span class="hidden-mobile">: Coaching Session</span></p>
+                            <a class="track-link"><img src="icons/Plus.svg" alt="plus"> Track Practice</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="resource">
-                    <a href="#" class="resourse-arrow">
-                        <img src="icons/Resources Arrows.svg" alt="resourse-arrow">
-                    </a>
-                    <p>Leaders Practice Empathy  <span class="source"> Simon Simek on YouTube (1:14)</span></p>
+                <div class="resources-block">
+                    <h2>More Resources</h2>
+                    <div class="resources-container">
+                        <div class="resource">
+                            <a href="#" class="resourse-arrow">
+                                <img src="icons/Resources Arrows.svg" alt="resourse-arrow" class="resource-arrow-icon hidden-arrow">
+                            </a>
+                            <p class="resource-descr">Brené Brown on Empathy <span class="source"> RSA on YouTube (2:53)</span> </p>
+                        </div>
+                        <div class="resource">
+                            <a href="#" class="resourse-arrow">
+                                <img src="icons/Resources Arrows.svg" alt="resourse-arrow" class="resource-arrow-icon">
+                            </a>
+                            <p class="resource-descr">Leaders Practice Empathy  <span class="source"> Simon Simek on YouTube (1:14)</span></p>
+                        </div>
+                        <div class="resource">
+                            <a href="#" class="resourse-arrow">
+                                <img src="icons/Resources Arrows.svg" alt="resourse-arrow" class="resource-arrow-icon">
+                            </a>
+                            <p class="resource-descr">9 Reasons Why Teams Love Empathetic Managers <span class="source"> Enterpreneur</span></p>
+                        </div>
+                        <div class="resource">
+                            <a href="#" class="resourse-arrow">
+                                <img src="icons/Resources Arrows.svg" alt="resourse-arrow" class="resource-arrow-icon">
+                            </a>
+                            <p class="resource-descr">What Emathy Got to Do With It <span class="source"> MindTolls</span></p>
+                        </div>
+                        <div class="resource">
+                            <a href="#" class="resourse-arrow">
+                                <img src="icons/Resources Arrows.svg" alt="resourse-arrow" class="resource-arrow-icon">
+                            </a>
+                            <p class="resource-descr">If You Can't Empathize with Your Employees, You Better Learn To <span class="source">HBR</span></p>
+                        </div>
+                        <div class="resource">
+                            <a href="#" class="resourse-arrow">
+                                <img src="icons/Resources Arrows.svg" alt="resourse-arrow" class="resource-arrow-icon">
+                            </a>
+                            <p class="resource-descr">Empathy Anecdote <span class="source"> Wiser</span></p>
+                            <a href="#" class="resourse-arrow">
+                                <img src="icons/Resources Arrows.svg" alt="resourse-arrow" class="resource-arrow-icon opened-arrow">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="resource">
-                    <a href="#" class="resourse-arrow">
-                        <img src="icons/Resources Arrows.svg" alt="resourse-arrow">
-                    </a>
-                    <p>9 Reasons Why Teams Love Empathetic Managers <span class="source"> Enterpreneur</span></p>
-                </div>
-                <div class="resource">
-                    <a href="#" class="resourse-arrow">
-                        <img src="icons/Resources Arrows.svg" alt="resourse-arrow">
-                    </a>
-                    <p>What Emathy Got to Do With It <span class="source"> MindTolls</span></p>
-                </div>
-                <div class="resource">
-                    <a href="#" class="resourse-arrow">
-                        <img src="icons/Resources Arrows.svg" alt="resourse-arrow">
-                    </a>
-                    <p>If You Can't Empathize with Your Employees, You Better Learn To <span class="source">HBR</span></p>
-                </div>
-                <div class="resource">
-                    <a href="#" class="resourse-arrow">
-                        <img src="icons/Resources Arrows.svg" alt="resourse-arrow">
-                    </a>
-                    <p>Empathy Anecdote <span class="source"> Wiser</span></p>
-                </div>
-            </div>   
-        </div>
-    </section>
+                <div class="coach-block">
+                    <h2>My Coach</h2>
+                    <div class="coach-container">
+                        <div class="coach-card">
+                            <img src="icons/Coach Image.svg" alt="coach-photo" class="coach-photo">
+                            <div class="coach-info">
+                                <h3>Jeanne Smith</h3>
+                                <p>CPCC, PCC Certified</p>
+                                <p>Los Angeles, CA, USA</p>
+                            </div>
+                        </div>
+                        <div class="about-coach">
+                            <div class="coach-description">
+                                Jeanne believes that how you feel at work is how you will do at work. 
+                                Having spent a number of years working with Marcus Buckingham -- a global thought leader on Strengths
+                                 -- and steeped in Positive Intelligence and Positive Psychology,
+                                 Jeanne has a studied appreciation of increasing an individual’s potential 
+                                 when you begin with positivity. <br><br>
+                                 Jeanne has coached executives in a wide-variety of industries, 
+                                 and brings a global experience in leadership development, executive presence, 
+                                 team systems coaching, training, facilitating, speaking engagements, 
+                                 contributing author to Forbes, leading executive career retreats, 
+                                 and coaching leaders at all levels within an organization.
+                            </div>
+                            <div class="show-more">
+                                <a href="#">Show More</a> <img src="icons/ArrowDown.svg" alt="arrow-down" class="arrow-down">
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </section>
+        <footer></footer>
+    </div>
+    
 
     <script src="js/main.js"></script>
     

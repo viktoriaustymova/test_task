@@ -8,35 +8,36 @@ const navbar = document.querySelectorAll('.module-list-container');
 const menuLinks = document.querySelectorAll('.menu-links');
 const modulesList = document.querySelectorAll('.modules-list li');
 const selectedMenuItem = document.querySelector('.modules-list-item-selected');
+const selectedSecondIcon = document.querySelector('.selected-icon');
+const menuItemIcons = document.querySelectorAll('.hidden-menu .module-list-icon');
 
 toggleButton.addEventListener('click',toggleSideMenu);
+
+modulesList.forEach(item => {
+   item.onmouseover = () => {
+      item.style.backgroundColor = 'rgba(243, 243, 243, 1)';
+      item.style.borderRadius = '3px';
+      item.style.border = '0px';
+   };
+
+   item.onmouseout = () => {
+      item.style.backgroundColor = '';
+      item.style.borderRadius = '';
+      item.style.border = '';
+   };
+});
 
 function toggleSideMenu() {
     hiddenMenuIcons.classList.toggle('visible');
     hiddenItem.style.display = 'none';
     hiddenIcon.style.display = 'none';
     hiddenSeparator.style.display = 'none';
-    hiddenMenuItems.forEach(item => item.classList.remove('hidden'));
-    modulesList.forEach(item => {
-       item.onmouseover = () => {
-          item.style.backgroundColor = 'rgba(243, 243, 243, 1)';
-          item.style.borderRadius = '3px';
-          item.style.border = '0px';
-       };
- 
-       item.onmouseout = () => {
-          item.style.backgroundColor = '';
-          item.style.borderRadius = '';
-          item.style.border = '';
-       };
-    });
+    hiddenMenuItems.forEach(item => item.classList.remove('hidden')); 
 }
 
 let previousTarget = null;
-let selectedSecondIcon = document.querySelector('.selected-icon');
 let newSelectedMenuIcon = 'icons/dotBlack.svg';
 let firstMenuIconDefault = 'icons/dot.svg';
-let menuItemIcons = document.querySelectorAll('.hidden-menu .module-list-icon');
 let selectedMenuIcon = 'icons/LockedOrange.svg';
 let menuItemIconDefault = 'icons/LockedSmall.svg';
 
