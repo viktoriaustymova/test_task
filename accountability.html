@@ -9,6 +9,10 @@
 </head>
 <body>
     <div class="container">
+        <div class="mobile-header">
+            <img src="icons/owl.svg" alt="owl" class="owl-logo-mobile">
+            <a class="mobile-menu-open"><img src="icons/Mobile Menu.svg" alt="hamburger-menu-icon" class="toggle-mobile-menu"></a>
+        </div>
         <section>
             <nav class="sidebar">
                 <img src="icons/owl.svg" alt="owl" class="owl-logo">
@@ -34,7 +38,7 @@
                             <li><a href="index.html"><span class="menu-numbers">1:</span> Inner Critic</span></a></li>
                             <li><a href="feedback.html"><span class="menu-numbers">2:</span> Feedback</a></li> 
                             <li><a href="#"><span class="modules-list-item-selected"><span class="menu-numbers">3:</span> Accountability</span></a></li>
-                            <li><button id="more-button"> + 2 More</button></li>
+                            <li><button class="more-button"> + 2 More</button></li>
                             <li class="hidden"><a href="#" class="menu-links"><span class="menu-numbers">4:</span> Unassigned</a></li>
                             <li class="hidden"><a href="#" class="menu-links"><span class="menu-numbers">5:</span> Unassigned</a></li>
                         </ol>
@@ -57,29 +61,29 @@
                 <div class="module-block">
                     <div class="dashboard-heading">
                         <a href="feedback.html"><img src ="icons/ArrowLeft.svg" alt="arrow-icon" class="arrow-left"></a>
-                        <h1>Module 3: Accountability</h1>
+                        <h1><span class="hidden-mobile">Module </span>3: Accountability</h1>
                         <a href="#"><img src="icons/Change Modules.svg" alt="arrow-icon" class="arrow-right"></a>
                     </div>
                     <div class="phases">
                         <div class="completed-phase">
-                                <img src="icons/Check.svg" alt="check" class="locked-icon">
-                                <p class="phase-capture">Phase 1: Observing Yourself</p>
-                                <a class="track-link"><img src="icons/Plus.svg" alt="plus"> Track Practice</a>
-                        </div>
-                        <div class="completed-phase">
                             <img src="icons/Check.svg" alt="check" class="locked-icon">
-                            <p class="phase-capture">Phase 2: Small Steps</p>
+                            <p class="phase-capture">Phase 1<span class="hidden-mobile">: Observing Yourself</span></p>
                             <a class="track-link"><img src="icons/Plus.svg" alt="plus"> Track Practice</a>
-                        </div>
-                        <div class="completed-phase">
-                            <img src="icons/Check.svg" alt="check" class="locked-icon">
-                            <p class="phase-capture">Phase 3: Big Leaps</p>
-                            <a class="track-link"><img src="icons/Plus.svg" alt="plus"> Track Practice</a>
-                        </div>
-                        <div class="phase-heading-block">
-                            <div>Phase 4: Coaching Session</div>
-                            <div>Due Date: Jul 8</div>
-                        </div>
+                    </div>
+                    <div class="completed-phase">
+                        <img src="icons/Check.svg" alt="check" class="locked-icon">
+                        <p class="phase-capture">Phase 2<span class="hidden-mobile">: Small Steps</span></p>
+                        <a class="track-link"><img src="icons/Plus.svg" alt="plus"> Track Practice</a>
+                    </div>
+                    <div class="completed-phase">
+                        <img src="icons/Check.svg" alt="check" class="locked-icon">
+                        <p class="phase-capture">Phase 3<span class="hidden-mobile">: Big Leaps</span></p>
+                        <a class="track-link"><img src="icons/Plus.svg" alt="plus"> Track Practice</a>
+                    </div>
+                    <div class="phase-heading-block">
+                        <div>Phase 4<span class="hidden-mobile">: Coaching Session</span></div>
+                        <div>Due Date: Jul 8</div>
+                    </div>
                         <div class="phase-content-block">
                             <div class="reflection">
                                 <img src="icons/reflectionIcon.svg" alt="cloud">
@@ -139,7 +143,8 @@
                     </div>
                 </div>   
             </div>
-        </section>    
+        </section>
+        <footer></footer>
     </div>
     
     <script src="js/modules.js"></script>

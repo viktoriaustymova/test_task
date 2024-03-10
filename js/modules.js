@@ -1,4 +1,4 @@
-const toggleButton = document.getElementById('more-button');
+const toggleButton = document.querySelector('.more-button');
 const hiddenMenuIcons = document.querySelector('.hidden-menu');
 const hiddenIcon = document.querySelector('.hidden-icon');
 const hiddenItem = document.querySelector('.modules-list li:nth-child(4)');
@@ -10,6 +10,11 @@ const modulesList = document.querySelectorAll('.modules-list li');
 const selectedMenuItem = document.querySelector('.modules-list-item-selected');
 const selectedSecondIcon = document.querySelector('.selected-icon');
 const menuItemIcons = document.querySelectorAll('.hidden-menu .module-list-icon');
+const footer = document.querySelector('footer');
+const toggleMobileMenuButton = document.querySelector('.mobile-menu-open');
+const hiddenMenuItemsMobile = document.querySelectorAll('.unlocked-list .hidden');
+const menuFirstItemUnlocked = document.querySelector('.modules-list-item-first-unlocked');
+const hiddenIconsLocked = document.querySelector('.locked-icons');
 
 toggleButton.addEventListener('click',toggleSideMenu);
 
@@ -73,4 +78,43 @@ function toggleItem(event){
    if(event.target === selectedMenuItem){
       selectedSecondIcon.src = firstMenuIconDefault;
    }
+}
+
+
+let isMenuOpen = false;
+const sideMenu = document.querySelector('.sidebar');
+const mainBlock = document.querySelector('.main');
+const mobileHeader = document.querySelector('.mobile-header');
+const owlLogoMobile = document.querySelector('.owl-logo-mobile');
+const toggleMenuIcon = document.querySelector('.toggle-mobile-menu');
+let closeMenuIcon = 'icons/Close.svg';
+let openMenuIcon = 'icons/Mobile Menu.svg';
+
+toggleMobileMenuButton.addEventListener('click',toggleMobileMenu);
+
+function toggleMobileMenu(){
+   if(isMenuOpen){
+      sideMenu.style.display = 'none';
+      sideMenu.style.height = '0';
+      mainBlock.style.display = 'block';
+      owlLogoMobile.style.display = 'block';
+      mobileHeader.style.backgroundColor = 'white';
+      toggleMenuIcon.src = openMenuIcon;
+      mobileHeader.style.justifyContent = 'space-between';
+      footer.style.display = 'block';
+      hiddenMenuIcons.classList.toggle('visible');
+      
+   } else {
+      sideMenu.style.display = 'block';
+      sideMenu.style.height = '100vh';
+      mainBlock.style.display = 'none';
+      mobileHeader.style.backgroundColor = 'rgba(243, 243, 243, 1)';
+      owlLogoMobile.style.display = 'none';
+      toggleMenuIcon.src = closeMenuIcon;
+      mobileHeader.style.justifyContent = 'right';
+      footer.style.display = 'none';
+      hiddenMenuItems.forEach(item => item.classList.remove('hidden'));
+      hiddenMenuIcons.classList.toggle('visible');
+   }
+   isMenuOpen = !isMenuOpen;
 }

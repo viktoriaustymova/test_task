@@ -6,36 +6,29 @@
   
 html, body{
     font-family: "Nunito Sans", sans-serif;
-    /* height: 100%; */
-    /* width: auto; */
 }
 
 
 .container{
-    /* height: 1263px; */
    display: grid;
    grid-template-columns: 1fr 4fr;
  
 }
 
-
 .main{
     width: 80%;
-    /* height: 1005px; */
     margin:0 auto 20% auto;
     padding: 2rem;
 }
 
 .sidebar{
-    /* padding-left: 30px;
-    padding-right: 30px; */
     position: static; 
     left: 0; 
     width: 100%;
     background-color: rgba(243, 243, 243, 1);
     height: 100%;
     padding: 2rem;
-    /* overflow: auto; */
+
 }
 
 .sidebar li:first-child{
@@ -130,8 +123,7 @@ html, body{
 }
 
 .module-list-icon{
-    width: 16x;
-    height: 16px; 
+    height: 14px; 
     padding-left: 10px;
     margin-right: 10px; 
 }
@@ -146,7 +138,7 @@ html, body{
     margin-bottom: 2px;
     margin-top: 2px;
     width: 2px;
-    height: 9px;
+    height: 11px;
 }
 
 .more-button{
@@ -211,7 +203,6 @@ html, body{
         height: 25px;
     }
 }
-
 
 .arrow-left{
     display: none;
@@ -457,7 +448,7 @@ footer{
     }
 
     .module-list-icon{
-        width: 14x;
+        width: 20px;
         height: 14px; 
          
     }
@@ -552,7 +543,7 @@ footer{
         
 }
 
-@media (max-width: 425px){
+@media (max-width: 431px){
     .container{
         display: block;
     }
@@ -643,9 +634,74 @@ footer{
     }
 
     .sidebar{
+        padding: 20px 60px 105px 60px;
         display:none;
     }
+
+    .navbar-header{
+       text-align: center; 
+    }
+
+    .navbar{
+        text-align: center;
+        li{
+            font-size: 23px;
+        }
+    }
+
+    .modules-list {
+        text-align: left;
+        li{
+            font-size: 16px;
+        }
+    }
+
+    .module-list-icon{
+        width: 3vh;
+        height: 3vh;
+    }
+
+    .separator{
+        height: 5px;
+    }
+
+    .unlocked-list li:nth-child(4){
+        display: none;
+    }
+
+    .locked-link{
+        display: block;
+    }
+
+    .modules-list li:nth-child(2){
+        display: none;
+    }
     
+    .hidden-icon{
+        display: none;
+    }
+
+    .hidden-separator{
+        display: none;
+    }
+
+    .unlocked-list li:nth-child(2){
+        display: block;
+    }
+
+    .hidden-separator-locked{
+        display: none;
+    }
+
+    .hidden-icon-locked{
+        display: none;
+    }
+
+    .fifth-link{
+        font-style: italic;
+    }
+
+
 }
 
     

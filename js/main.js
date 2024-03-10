@@ -29,7 +29,8 @@ const hiddenSeparatorLocked = document.querySelector('.hidden-separator-locked')
 const hiddenIconsLocked = document.querySelector('.locked-icons');
 const navigationsArrow = document.querySelector('.navigationsArrow');
 const toggleMobileMenuButton = document.querySelector('.mobile-menu-open');
-
+const hiddenMenuItemsMobile = document.querySelectorAll('.unlocked-list .hidden');
+const menuFirstItemUnlocked = document.querySelector('.modules-list-item-first-unlocked');
 
 toggleButton.addEventListener('click',toggleSideMenu);
 
@@ -64,7 +65,7 @@ let menuItemIconDefault = 'icons/LockedSmall.svg';
 
 navbar.forEach(item => {
    item.addEventListener('click',toggleItem);
-})
+});
 
 function toggleItem(event){
    
@@ -76,6 +77,8 @@ function toggleItem(event){
       firstMenuItem.style.fontWeight = 300;
       firstMenuItem.style.fontStyle = 'normal';
       firstMenuIcon.src = newFirstMenuIcon;
+      menuFirstItemUnlocked.style.color = 'rgba(0, 0, 0, 1)';
+      menuFirstItemUnlocked.style.fontWeight = 300; 
    }
    
    event.target.style.fontStyle = 'normal';
@@ -93,12 +96,10 @@ function toggleItem(event){
 
    if(event.target === firstMenuItem){
       firstMenuIcon.src = firstMenuIconDefault;
-   }
+   } 
 }
 
-
-let firstModuleCompleted = localStorage.getItem('functionExecuted') === 'true' ? true : false;
-let interfaceUpdated = false;
+let firstModuleCompleted = false;
 let secondModuleProgress = 50;
 let thirdModuleProgress = 50;
 
@@ -107,14 +108,11 @@ setTimeout(function(){
    if(secondModuleProgress && thirdModuleProgress){
       firstModuleCompleted = true;
       updateInterface();
-      localStorage.setItem('functionExecuted', 'true');
-      localStorage.setItem('interfaceUpdated', 'true');
    }
-}, 100000);
-
-localStorage.setItem('interfaceUpdated', 'true');
+}, 7000);  
 
 function updateInterface(){
+   
    if(firstModuleCompleted){
       lockedPhases.style.display = 'none';
       completedPhases.style.display = 'block';
@@ -132,6 +130,8 @@ function updateInterface(){
       hiddenButton.style.display = 'block';
       hiddenButton.style.borderBottom = '0px';
       navigationsArrow.href = 'feedback.html';
+      menuFirstItemUnlocked.style.color = 'rgba(253, 77, 0, 1)'; 
+      menuFirstItemUnlocked.style.fontWeight = 800;
       hiddenMenuItemsUnlockedList.forEach(item => item.style.display = 'none');
       modulesList.forEach(item => {
          item.onmouseover = () => {
@@ -146,12 +146,15 @@ function updateInterface(){
             item.style.border = '';
          };
       });
-      localStorage.setItem('interfaceUpdated', 'true');
+      if(window.innerWidth < 431){
+         hiddenButton.style.display = 'none';
+         hiddenMenuItemsUnlockedList.forEach(item => item.style.display = 'block'); 
+      }
    }
 }
 
 
-showMoreButton.addEventListener('click',showLockedLinks);
+showMoreButton.addEventListener('click', showLockedLinks);
 
 function showLockedLinks(){
    hiddenIconsLocked.classList.toggle('visible');
@@ -160,6 +163,8 @@ function showLockedLinks(){
    hiddenSeparatorLocked.style.display = 'none';
    hiddenMenuItems.forEach(item => item.classList.remove('hidden'));
    hiddenMenuItemsUnlockedList.forEach(item => item.style.display = 'block'); 
+   menuFirstItemUnlocked.style.color = 'rgba(253, 77, 0, 1)'; 
+   menuFirstItemUnlocked.style.fontWeight = 800;
 }
 
 
@@ -182,8 +187,10 @@ function toggleMobileMenu(){
       owlLogoMobile.style.display = 'block';
       mobileHeader.style.backgroundColor = 'white';
       toggleMenuIcon.src = openMenuIcon;
-      mobileHeader.style.position = 'relative';
-
+      mobileHeader.style.justifyContent = 'space-between';
+      footer.style.display = 'block';
+      hiddenIconsLocked.classList.toggle('visible');
+      
    } else {
       sideMenu.style.display = 'block';
       sideMenu.style.height = '100vh';
@@ -191,9 +198,12 @@ function toggleMobileMenu(){
       mobileHeader.style.backgroundColor = 'rgba(243, 243, 243, 1)';
       owlLogoMobile.style.display = 'none';
       toggleMenuIcon.src = closeMenuIcon;
-      toggleMobileMenuButton.style.right = '0';
+      mobileHeader.style.justifyContent = 'right';
+      footer.style.display = 'none';
+      hiddenMenuIcons.classList.toggle('visible');
+      hiddenMenuItems.forEach(item => item.classList.remove('hidden'));
+      hiddenIconsLocked.classList.toggle('visible');
    }
    isMenuOpen = !isMenuOpen;
-  
 }
 
